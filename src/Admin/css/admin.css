@@ -1,0 +1,294 @@
+:root {
+    --darkBlack: #1E1C2A;
+    --lightBlack: rgb(53, 53, 53);
+    --textColor: rgb(236, 236, 236);
+}
+.admin {
+    width: 100%;
+    height: 100vh;
+    background: var(--darkBlack);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+}
+.adminNav_container {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--darkBlack);
+}
+.adminContentBox_container {
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+    position: relative;
+}
+.adminContentBox_container::-webkit-scrollbar {
+  width: 5px;
+  background: rgb(34, 30, 44);
+}
+.adminContentBox_container::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: rgb(76, 73, 105);
+  border-radius: 10px;
+}
+.adminPageTitle {
+    padding: 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+.adminNav_menuBox {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10%;
+}
+.adminNav_menuBox ul {
+    list-style: none;
+}
+.adminNav_menus {
+    position: relative;
+}
+.adminNav_menuBox ul li {
+    width: 100%;
+    display: flex;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(163, 163, 163);
+    display: flex;
+    align-items: center;
+    line-height: 3;
+    column-gap: 16px;
+}
+.adminNav_menuBox ul li i {
+    width: 30px;   
+    height: 30px;
+    background:rgb(68, 68, 68);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adminNav_menus:hover {
+    color: #fff;
+}
+.adminNav_menuBox ul li:hover .navIconSelected {
+    background: linear-gradient(-45deg, rgb(253, 133, 20),rgb(228, 157, 25)) !important;
+    color: #fff !important;
+}
+.activeNavLink .navIconSelected {
+    background: linear-gradient(-45deg, rgb(253, 133, 20),rgb(228, 157, 25)) !important;
+    box-shadow: 0 20px 30px rgba(253, 133, 20, 0.274);
+    color: #fff !important;
+}
+.activeNavLink li {
+    color: #fff !important;
+}
+.newPostLink {
+    position: absolute;
+    right: 0;
+    color: rgb(185, 185, 185);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: linear-gradient(-245deg,rgb(70, 70, 70),rgb(53, 53, 53));
+    top: 50%;
+    transform: translateY(-50%);
+}
+.finalUploadButton {
+    position: relative;
+    padding: 24px;
+    border-radius: 4px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    background: linear-gradient(rgb(248, 134, 28),rgb(202, 73, 13));
+    border: none;
+    font-weight: 600;
+    color:rgb(53, 26, 13);
+    cursor: pointer;
+}
+.finalUploadButton::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 80%;
+    background: #16141f;
+    left: 2%;
+    top: 50%;
+    border-radius: 99vh 0 99vh 0;
+    transform: translateY(-50%);
+    box-shadow: 3px 3px 0 0 rgb(80, 6, 6) inset,-3px -3px 0 0 rgb(240, 140, 47) inset;
+    transition: 0.2s ease;
+}
+.finalUploadButton::after {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 80%;
+    background: #16141f;
+    right: 2%;
+    top: 50%;
+    border-radius: 0 99vh 0 99vh;
+    transform: translateY(-50%);
+    box-shadow: -3px -3px 0 0 rgb(80, 6, 6) inset,3px 3px 0 0 rgb(240, 140, 47) inset;
+    transition: 0.2s ease;
+}
+.finalUploadButton:hover::after {
+    right: 3%;
+    opacity: 0.1;
+}
+.finalUploadButton:hover::before {
+    left: 3%;
+    opacity: 0.1;
+}
+.AdminArticle_SubBox > input[type="file"] {
+    display: none;
+}
+.comingSoonAdmin {
+    color: rgb(233, 202, 27);
+    font-size: 0.7rem;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.podCastAdminTitle {
+    width: 80%;
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.podCastAuthorAdmin {
+    width: 100%;
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.articleDiscription {
+    line-height: 2;
+    text-align: justify;
+    padding-right: 24px;
+}
+.AdminLoginContainer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 24px;
+    position: relative;
+}
+.AdminLoginContainer p {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 600;
+}
+.AdminInputBox {
+    width: 500px;
+    border: 5px solid transparent;
+    border-radius: 8px;
+    background: rgb(44, 44, 44);
+    padding: 16px;
+    font-size: 1.6rem;
+    color: #fff;
+    text-align: center;
+    z-index: 5;
+}
+.AdminInputBox:focus {
+    border: 5px solid rgb(84, 70, 211);
+}
+.siteLogo {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 1.4rem;
+    color: #fff;
+    padding: 24px;
+}
+.siteLogo i {
+    color: orangered !important;
+}
+.bgImage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: lighten;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0.05;
+}
+.errorLog {
+    color:rgb(243, 87, 49);
+    font-size: 1.2rem;
+}
+.logoutButton {
+    position: absolute;
+    bottom: 12px;
+    color: rgb(225, 187, 250);
+    left: 24px;
+    display: flex;
+    padding: 12px 32px;
+    column-gap: 8px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.logoutButton:hover {
+background: rgba(225, 187, 250, 0.02);
+}
+#statusBar {
+    display: none;
+}
+.newPostLink {
+    display: flex; 
+    column-gap: 12px;
+}
+.updateStatusText {
+    position: fixed;
+    right: 12px;
+    bottom: 10px;
+    display: none;
+    column-gap: 16px;
+    padding: 12px 32px;
+    border-radius: 8px;
+    border: 1px solid green;
+    background: rgba(27, 226, 83,0.9);
+    color: #082d12;
+    animation: 5s comeandgo ease-out forwards;
+}
+@keyframes comeandgo {
+    0% {
+        bottom: -100px;
+    }
+    10% {
+        bottom: 100px;
+    }
+    90% {
+        bottom: 105px;
+    }
+    99.5% {
+        bottom: -100px;
+    }
+}
+.podcastEditPlayer {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    box-shadow: 0 0 30px black;
+    border-radius: 99vw;
+}

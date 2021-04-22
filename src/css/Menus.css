@@ -1,0 +1,152 @@
+.mainMenuBox {
+  width: 100%;
+  background: transparent;
+  box-sizing: border-box;
+  display: flex;
+}
+.allMenuBox {
+  position: relative;
+  height: 60px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #3d3f58;
+  justify-content: space-between;
+  border-radius: 12px 0 0 12px;
+}
+.allMenuBox > ul {
+  display: flex;
+  list-style: none;
+}
+.menusLink {
+  padding: 0 24px;
+  cursor: pointer;
+  color: #9092aa;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.menusLink:hover {
+  color: rgb(53, 141, 223);
+}
+.activeLink > li {
+  color: rgb(53, 141, 223) !important;
+}
+.searchBox {
+  position: relative;
+  height: 60px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #313348;
+  justify-content: space-between;
+  border-radius: 0 12px 12px 0;
+}
+.siteSearchBox {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding-left: 4px;
+  box-sizing: border-box;
+  caret-color: #9092aa;
+  color: #fff;
+  font-weight: 600;
+}
+.searchBox > input::placeholder {
+  color: #737486;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.searchBox > i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 24px;
+  color: #9092aa;
+  background: #3d3f58;
+  box-shadow: -10px 0 30px 10px #3d3f58;
+}
+.mobile_naveBarBox {
+  width: 80px;
+  height: 60px;
+  background: #3d3f58;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  color: #9092aa;
+  display: none;
+}
+.hideMobileMenu {
+  display: none;
+}
+.mobileMenuBox {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #191924de;
+  backdrop-filter: blur(20px) !important;
+  z-index: 1000;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mobileMenuBox ul {
+  list-style: none;
+}
+.mobileMenuBox > ul > p {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.267);
+  font-weight: 400;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  column-gap: 12px;
+}
+.mobileMenuBoxCloseButton {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: rgba(255, 255, 255, 0.486);
+  font-size: 2rem;
+  padding: 12px;
+}
+.menusLink2 {
+  line-height: 2;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem !important;
+  color: #c1c2d3;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.commingSoonText {
+  color: rgb(240, 218, 20);
+  font-size: 0.7rem;
+  padding-left: 5px;
+}
+@media only screen and (max-width: 600px) {
+  .mainMenuBox {
+    column-gap: 12px;
+  }
+  .allMenuBox {
+    display: none;
+  }
+  .searchBox {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .mobile_naveBarBox {
+    display: flex;
+    border-radius: 12px;
+  }
+}

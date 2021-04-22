@@ -1,0 +1,94 @@
+.topStoriesMainBox {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.topStoriesMainBox > p:nth-child(1) {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+.eachStoresBox {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 8px;
+}
+.story {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border-radius: 12px 18px 12px 12px;
+  overflow: hidden;
+}
+.storyImage1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.storyTitlesBox {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  row-gap: 6px;
+  padding: 0 16px 12px 16px;
+}
+.storyMainTitle1 {
+  color: #edeef3;
+  font-size: 1.1rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: inherit;
+}
+.storyMainTitle2 {
+  font-size: 0.8rem;
+  color: #b3b3bb;
+  display: flex;
+  align-items: center;
+}
+.storyMainTitle2 strong {
+  position: relative;
+  top: -2px;
+  padding: 0 2px 0 4px;
+}
+.cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to top, rgba(5, 5, 5, 0.856), transparent 40%);
+  z-index: 2;
+}
+.newBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 16px;
+  border-radius: 12px;
+  background: linear-gradient(to top, rgb(255, 145, 0), yellow);
+  color: #60611d;
+  font-size: 0.7rem;
+  font-weight: bold;
+  box-shadow: 0 0 0 5px #242537;
+}
+.seemoreStories {
+  position: absolute;
+  font-size: 0.8rem;
+  color: rgba(218, 218, 218, 0.452);
+  right: 16px;
+  top: 8px;
+}
+@media only screen and (max-width: 600px) {
+  .eachStoresBox {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 8px;
+  }
+}

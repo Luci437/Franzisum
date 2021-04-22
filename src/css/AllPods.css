@@ -1,0 +1,132 @@
+.AllPodsMainBox {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.AllPodsMainBox > p:nth-child(1) {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+}
+.allPostsMain {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 8px;
+}
+.eachPods {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: #3d3f58;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.eachPods:hover .podCasset {
+  box-shadow: 5px 5px 10px #16171a00, -5px -5px 5px #989bac00;
+  animation: rotateCasset 5s infinite linear;
+}
+@keyframes rotateCasset {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.podCasset {
+  width: 80px;
+  height: 80px;
+  border-radius: 200px;
+  object-fit: cover;
+  box-shadow: 5px 5px 10px #23242ca6, -5px -5px 5px #989bac77;
+  border: 2px solid #989bac77;
+  box-sizing: border-box;
+  transition: all 1s ease;
+}
+.cdPlayer {
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  background: #242537;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  align-items: center;
+}
+.cdPlayer::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 15px;
+  top: -15px;
+  left: 0;
+  border-radius: 0 0 0 50px;
+  box-shadow: -20px 0px 0 0 #242537;
+}
+.cdPlayer::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 15px;
+  bottom: -15px;
+  left: 0;
+  border-radius: 50px 0 0 0;
+  box-shadow: -20px 0px 0 0 #242537;
+}
+.rounder {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 4px;
+  background: #15151f;
+  border-radius: 10px;
+  background: url("../Images/camlens.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.podDataParts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.podDataParts > p:nth-child(1) {
+  color: #fff;
+  font-weight: 600;
+}
+.podDataParts > p:nth-child(2) {
+  color: rgba(218, 218, 218, 0.452);
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+.transparentImage {
+  position: absolute;
+  right: -15%;
+  top: 50%;
+  transform: translateY(-50%) scale(2);
+  width: 100px;
+  clip-path: circle(50% at 50% 50%);
+  opacity: 0.1;
+}
+.cdPlayer > p {
+  font-size: 0.8rem;
+  color: rgb(251, 251, 251);
+  padding-left: 4px;
+}
+@media only screen and (max-width: 600px) {
+  .allPostsMain {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+  }
+}

@@ -1,0 +1,73 @@
+.AdminArticlesView_container {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 80px 24px 24px 24px;
+}
+.AdminAllContainer__TitleName {
+    font-size: 2rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    position: relative;
+    margin-bottom: 3%;
+}
+.AdminAllContainer__TitleName > i {
+    padding: 12px;
+    background:rgb(84, 70, 211);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.viewGridContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+}
+.editBox_option {
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    display: flex;
+    column-gap: 24px;
+    font-size: 1rem;
+    padding: 8px 24px 12px 24px;
+    border-radius: 0 0 24px 24px;
+    background: #1E1C2A;
+    color: rgb(153, 153, 153);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.431);
+    cursor: pointer;
+    z-index: 30;
+    transition: 0.2s ease-out;
+}
+.editBox_option i {
+    color: rgb(153, 153, 153);
+}
+.editBox_option i:hover {
+    color: #fff;
+}
+.editBox_option::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    left: -20px;
+    top: 0;
+    border-radius: 0 20px 0 0;
+    box-shadow: 8px -7px 0 2px #1E1C2A;
+}
+.editBox_option::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    right: -20px;
+    top: 0;
+    border-radius: 20px 0 0 0;
+    box-shadow: -8px -7px 0 2px #1E1C2A;
+}

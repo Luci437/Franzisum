@@ -1,0 +1,99 @@
+.article__mainContainer {
+  position: relative;
+  width: 100%;
+  padding: 16px;
+  background: rgb(241, 241, 241);
+  display: flex;
+  border-radius: 12px;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+.article__imageBox {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+.article__imageBox img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+.article__articleTitle {
+  font-size: 3rem;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.article_content {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+.article__shareBox {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 6px 14px 4px 14px;
+  display: flex;
+  column-gap: 12px;
+  background: #fff;
+  border-radius: 99vh;
+  z-index: 10;
+}
+.article__YoutubeBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.article__YoutubeBox > iframe {
+  width: 80%;
+  height: 60vh;
+  border-radius: 12px;
+}
+.suggestedArticle_box {
+  position: relative;
+  width: 100%;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 8px;
+}
+.suggestBox_each {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+}
+.suggestBox_each img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.suggestBox_each p {
+  font-size: 1.2rem;
+  width: 100%;
+  font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+  .article__articleTitle {
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1.4;
+  }
+  .article__YoutubeBox > iframe {
+    width: 100%;
+    height: 40vh;
+  }
+  .article_content {
+    width: 100%;
+  }
+}

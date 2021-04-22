@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  box-sizing: border-box;
+}
+
+.appPUBLIC {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #242537;
+  box-sizing: border-box;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.MerchAndSliderBox {
+  width: 100%;
+  display: flex;
+  column-gap: 16px;
+}
+.mainSliderBox {
+  position: relative;
+  width: 70%;
+  background: grey;
+  height: 60vh;
+  border-radius: 12px;
+  display: flex;
+  overflow: hidden;
+}
+.imagePart {
+  width: 70%;
+  height: 100%;
+  position: relative;
+}
+.dataPart {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  background: #3d3f58;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.sliderImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sliderController {
+  position: absolute;
+  right: 0;
+  top: 6%;
+  background: #3d3f58;
+  border-radius: 8px 0 0 8px;
+  padding: 12px 0;
+  min-width: 130px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.8rem;
+  box-shadow: 10px 0 0 0 #3d3f58;
+}
+.sliderController::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -30px;
+  background: transparent;
+  border-radius: 0 0 50% 0;
+  right: 0;
+  box-shadow: 5px 5px 0 0 #3d3f58;
+}
+.sliderController::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: -30px;
+  background: transparent;
+  border-radius: 0 50% 0 0;
+  right: 0;
+  box-shadow: 5px -5px 0 0 #3d3f58;
+}
+.sliderController i {
+  padding: 4px 14px;
+  color: rgb(161, 161, 161);
+  cursor: pointer;
+  font-size: 1rem;
+}
+.sliderController i:hover {
+  color: rgb(218, 218, 218);
+}
+.sliderController p {
+  color: rgb(116, 116, 116);
+}
+.sliderController p strong {
+  color: rgb(161, 161, 161);
+}
+.sliderController p strong:nth-child(1) {
+  padding-right: 4px;
+}
+.sliderController p strong:nth-child(2) {
+  padding-left: 4px;
+}
+.categoryName {
+  font-size: 0.8rem;
+  color: rgba(218, 218, 218, 0.452);
+  padding-bottom: 0.5rem;
+}
+.shortTitleName {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.fourImageBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.imgBox {
+  width: 100%;
+  height: 80px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.imgBox::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 0, 0, 0);
+  backdrop-filter: sepia(0.4);
+  left: 0;
+  top: 0;
+  transition: 0.2s ease-out;
+}
+.imgBox:hover::before {
+  backdrop-filter: sepia(0);
+}
+.fourImages {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.availableOptions {
+  width: 100%;
+  padding: 16px 0;
+  box-sizing: border-box;
+  display: flex;
+  column-gap: 8px;
+}
+.availableOptions p {
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgb(46, 46, 46);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.705);
+  font-weight: 500;
+  cursor: pointer;
+}
+.availableOptions p i {
+  padding-right: 4px;
+}
+.availableOptions p i {
+  color: rgb(236, 79, 51);
+}
+.availableOptions p:nth-child(2) i {
+  color: rgb(156, 90, 231);
+}
+.allArticleContainer {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 12px;
+}
+@media only screen and (max-width: 600px) {
+  .appPUBLIC {
+    width: 100%;
+    overflow: hidden;
+  }
+  .MerchAndSliderBox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  .mainSliderBox {
+    width: 100%;
+    height: 40vh;
+  }
+  .sliderController {
+    font-size: 0.7rem;
+    min-width: 80px;
+  }
+  .dataPart {
+    padding: 8px;
+    display: none;
+  }
+  .fourImageBox {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .imgBox {
+    height: 30px;
+    border-radius: 2px;
+  }
+  .imagePart {
+    width: 100%;
+  }
+}

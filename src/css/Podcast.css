@@ -1,0 +1,222 @@
+.mainPodcastBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #3d3f58;
+  padding: 16px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.mainPodcastBox::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 50%;
+  background: url("../Images/image_processing20200418-16351-cpx3gi.png");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  bottom: 0;
+  right: 0;
+  mix-blend-mode: lighten;
+  opacity: 0.3;
+}
+.podMainTitle {
+  width: 55px;
+  height: 45px;
+  border-radius: 0 0 50px 50px;
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  transform: translateX(-50%);
+  background: #242537;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.podMainTitle::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  background: transparent;
+  left: -25px;
+  top: 5px;
+  box-shadow: 10px 0 0 0 #242537;
+  border-radius: 0 8px 0 0;
+}
+.podMainTitle::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 10px;
+  background: transparent;
+  right: -25px;
+  top: 5px;
+  box-shadow: -10px 0 0 0 #242537;
+  border-radius: 8px 0 0 0;
+}
+.playPodButton {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 100%;
+  position: relative;
+  top: -5px;
+  background: linear-gradient(#3d3f58, #2d2e41);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.playPodButton i {
+  padding-left: 3px;
+  font-size: 0.7rem;
+}
+.playPodButton:hover i {
+  text-shadow: 0 0 10px #fff;
+}
+.podDataPart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  display: flex;
+}
+.PodPosterBox {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 150px;
+  background: url("../Images/podcast.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 20px solid rgba(0, 0, 0, 0.801);
+  box-sizing: border-box;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.PodPosterBox:hover {
+  border: 5px solid rgba(0, 0, 0, 0.801);
+}
+.PodPosterBox:after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background: linear-gradient(#6d8ee9, #6589eb);
+  border: 5px solid rgb(27, 27, 27);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.PodPosterBox::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 30px;
+  background: #ffffff;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+.runPodDisk {
+  animation: 5s runPod infinite linear;
+}
+@keyframes runPod {
+  from {
+    transform: rotate(0deg);
+    border: 20px solid rgba(0, 0, 0, 0.801);
+  }
+  to {
+    transform: rotate(360deg);
+    border: 5px solid rgba(0, 0, 0, 0.945);
+  }
+}
+.podInfo {
+  position: relative;
+  max-width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+.podInfo p:nth-child(1) {
+  color: #fff;
+  font-weight: 600;
+}
+.podInfo p:nth-child(2) {
+  color: rgba(218, 218, 218, 0.452);
+}
+.nowPlayingPodAuthor {
+  font-size: 0.8rem;
+}
+.nowPlayingPodAuthor strong {
+  position: relative;
+  top: -3px;
+  padding: 0 3px;
+}
+.browseMorePod {
+  position: absolute;
+  height: 30px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: flex;
+  width: 12px;
+}
+.browseMorePod p {
+  font-size: 0.8rem;
+  color: rgba(218, 218, 218, 0.452);
+  display: none;
+}
+.browseMorePod:hover {
+  width: auto;
+}
+.browseMorePod:hover::after {
+  opacity: 0;
+}
+.browseMorePod:hover::before {
+  opacity: 0;
+}
+.browseMorePod:hover p {
+  display: block;
+}
+.browseMorePod::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(218, 218, 218, 0.452);
+  border-radius: 5px;
+  box-shadow: 0 8px 0 0 rgba(218, 218, 218, 0.452),
+    0 16px 0 0 rgba(218, 218, 218, 0.452);
+  transition: 0.3s ease-out;
+}
+.browseMorePod::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: rgba(218, 218, 218, 0.452);
+  border-radius: 5px;
+  right: 0;
+  box-shadow: 0 8px 0 0 rgba(218, 218, 218, 0.452),
+    0 16px 0 0 rgba(218, 218, 218, 0.452);
+  transition: 0.3s ease-out;
+}
+.playPodButton > .fa-pause {
+  position: relative;
+  left: -1px;
+}
+@media only screen and (max-width: 600px) {
+  .mainPodcastBox {
+    width: 100%;
+  }
+}

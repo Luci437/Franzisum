@@ -1,0 +1,91 @@
+.merchMainBox {
+  position: relative;
+  width: 30%;
+  height: 60vh;
+  background: transparent;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 1fr;
+  row-gap: 16px;
+  box-sizing: border-box;
+}
+.mainMerchBox {
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.mainMerchBox::before {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 100%;
+  right: 0;
+  transform: rotate(0deg) scale(1.5);
+  background: url("../Images/bg.gif");
+  background-size: contain;
+  background-position: center;
+  mix-blend-mode: soft-light;
+  z-index: 1;
+  clip-path: ellipse(78% 51% at 100% 51%);
+}
+.oneMerchImage {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+.merchInfoBox {
+  width: 60%;
+  height: 100%;
+  position: relative;
+  padding: 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 16px;
+  z-index: 2;
+}
+.merchMainTitle {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: rgb(41, 41, 41);
+  position: relative;
+}
+.shopNowButton {
+  border: none;
+  display: flex;
+  max-width: 130px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  background: rgb(88, 150, 231);
+  padding: 10px 16px;
+  color: rgb(29, 64, 110);
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+}
+.shopNowButton i {
+  transform-origin: 0% 100%;
+  transform: rotate(-10deg);
+  transition: 0.3s ease;
+}
+.shopNowButton:hover i {
+  transform: rotate(0deg) translateX(5px);
+}
+@media only screen and (max-width: 600px) {
+  .mainPodcastBox {
+    width: 100%;
+  }
+  .merchMainBox {
+    width: 100%;
+  }
+}

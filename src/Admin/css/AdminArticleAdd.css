@@ -1,0 +1,100 @@
+.AdminArticleAdd_container {
+    width: 100%;
+    padding: 24px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+.AdminArticle_SubBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+.inputTitle {
+    font-size: 1.2rem;
+    color: rgb(144, 144, 144);
+    font-weight: 500;
+}
+.InputBox {
+    padding: 16px 24px 16px 24px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.068);
+    border: 3px solid rgba(84, 70, 211, 0);
+}
+.InputBox:focus {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.082);
+    border: 3px solid rgb(84, 70, 211);
+}
+.textInputBox {
+    padding: 16px 24px 16px 24px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+    min-height: 250px;
+    background: rgba(255, 255, 255, 0.068);
+    border: 3px solid rgba(84, 70, 211, 0);
+    overflow-y: scroll;
+}
+.textInutBox::-webkit-scrollbar {
+  width: 5px;
+  background: rgb(34, 30, 44);
+}
+.textInutBox::-webkit-scrollbar-thumb {
+  width: 5px;
+  background: rgb(76, 73, 105);
+  border-radius: 10px;
+}
+.textInputBox:focus {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.082);
+    border: 3px solid rgb(84, 70, 211);
+}
+.uploadButton {
+    display: flex;
+    padding: 18px 30px;
+    border-radius: 8px;
+    background: rgb(84, 70, 211);
+    max-width: 150px;
+    color: rgb(195, 193, 230);
+    justify-content: space-around;
+    font-weight: 600;
+    cursor: pointer;
+}
+.uploadButton:hover {
+    color: #fff;
+}
+.optionalSubBox {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(3,1fr);
+}
+#articleCoverImage {
+    display: none;
+}
+.radioBox {
+    display: flex;
+    column-gap: 8px;
+}
+.postVisibilityInput {
+    display: none;
+}
+.postVisibilityLabel {
+    background: rgba(46, 46, 46, 0.664);
+    padding: 12px 24px;
+    color: rgb(121, 121, 121);
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    column-gap: 8px;
+    transition: 0.3s ease-out;
+}
+.postVisibilityInput:checked + .postVisibilityLabel {
+    background: rgb(84, 70, 211);
+    color: #fff;
+}
